@@ -7,6 +7,7 @@ def calculate_support_resistance(data, window=5):
     data['Support'] = data['Low'].rolling(window=window, center=True).min()
     data['Resistance'] = data['High'].rolling(window=window, center=True).max()
     return data
+    
 
 # Hisse senedi verilerini çek ve grafik çiz
 def plot_stock_data(ticker, period):
